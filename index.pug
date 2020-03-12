@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+html(lang="fr")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    link(rel="stylesheet", href="index.css")
+    title Filter Effects - JQuery Isotope
+  body
+    .wrapper
+      header.header
+        .container__nav
+          nav.nav
+            ul.nav__listItem
+              li.list__Item
+                a(href="#", data-filter=".all").is-active All
+              li.list__Item
+                a(href="#", data-filter=".plage") Plage
+              li.list__Item
+                a(href="#", data-filter=".ciel") Ciel
+              li.list__Item
+                a(href="#", data-filter=".montagne") Montagne
+              li.list__Item
+                a(href="#", data-filter=".work") Work
+              li.list__Item
+                a(href="#", data-filter=".animaux") Animaux
+      
+      section.content
+        .container
+            each val, index in [{image: 'https://picsum.photos/id/0/367/267', titre: 'work', content: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur repellendus dolores aliquam qui accusantium quidem reiciendis praesentium aliquid quod asperiores libero eum voluptatem sunt consectetur, nihil ex reprehenderit dicta nesciunt.'}, {image: 'https://picsum.photos/id/1024/367/267', titre: 'animaux', content: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur repellendus dolores aliquam qui accusantium quidem reiciendis praesentium aliquid quod asperiores libero eum voluptatem sunt consectetur, nihil ex reprehenderit dicta nesciunt.'}, {image: 'https://picsum.photos/id/1019/367/267', titre: 'ciel', content: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur repellendus dolores aliquam qui accusantium quidem reiciendis praesentium aliquid quod asperiores libero eum voluptatem sunt consectetur, nihil ex reprehenderit dicta nesciunt.'}, {image: 'https://picsum.photos/id/1018/367/267', titre: 'montagne', content: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur repellendus dolores aliquam qui accusantium quidem reiciendis praesentium aliquid quod asperiores libero eum voluptatem sunt consectetur, nihil ex reprehenderit dicta nesciunt.'}, {image: 'https://picsum.photos/id/100/367/267', titre: 'plage', content: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur repellendus dolores aliquam qui accusantium quidem reiciendis praesentium aliquid quod asperiores libero eum voluptatem sunt consectetur, nihil ex reprehenderit dicta nesciunt.'}, {image: 'https://picsum.photos/id/1/367/267', titre: 'work', content: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur repellendus dolores aliquam qui accusantium quidem reiciendis praesentium aliquid quod asperiores libero eum voluptatem sunt consectetur, nihil ex reprehenderit dicta nesciunt.'}]
+              figure.card.all(class= val.titre )
+                img(src= val.image, alt= val.work)
+                figcaption
+                  h3= val.titre
+                  p= val.content
+
+
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js")
+    script(src="https://unpkg.com/isotope-layout@3.0.6/dist/isotope.pkgd.min.js")
+    script(src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.js")
+    script(src="index.js")

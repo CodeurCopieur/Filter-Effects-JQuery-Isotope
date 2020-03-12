@@ -1,0 +1,112 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  list-style: none;
+  font-family: 'circular std', sans-serif; }
+
+.wrapper .header {
+  height: 70px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center; }
+  .wrapper .header .container__nav {
+    max-width: 1170px;
+    margin: 0 auto; }
+    .wrapper .header .container__nav .nav .nav__listItem {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+      flex-direction: row;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center; }
+      .wrapper .header .container__nav .nav .nav__listItem .list__Item {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        margin: 0px 20px; }
+        .wrapper .header .container__nav .nav .nav__listItem .list__Item a {
+          padding: 10px 20px;
+          cursor: pointer;
+          text-decoration: none;
+          background-color: #dce7eb;
+          color: rgba(48, 69, 92, 0.8);
+          font-weight: bold;
+          display: inline-block;
+          text-transform: uppercase;
+          -webkit-transition: all 480ms;
+          -o-transition: all 480ms;
+          transition: all 480ms; }
+          .wrapper .header .container__nav .nav .nav__listItem .list__Item a:hover {
+            color: #fefffa;
+            background-color: #ff6873; }
+          .wrapper .header .container__nav .nav .nav__listItem .list__Item a.is-active {
+            color: #fefffa;
+            background-color: #ff6873; }
+
+.wrapper .content .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto; }
+  .wrapper .content .container .card {
+    width: 33.33333%;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer; }
+    .wrapper .content .container .card:hover figcaption {
+      -webkit-transform: scale(1);
+      -ms-transform: scale(1);
+      transform: scale(1); }
+    .wrapper .content .container .card img {
+      width: 100%; }
+    .wrapper .content .container .card figcaption {
+      position: absolute;
+      background-color: #ff6873;
+      color: #dce7eb;
+      -webkit-transform: scale(0);
+      -ms-transform: scale(0);
+      transform: scale(0);
+      top: -4px;
+      right: 0;
+      width: 100%;
+      height: 100%;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      text-align: center;
+      -ms-flex-line-pack: center;
+      align-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      padding: 10px;
+      -webkit-transition: all 480ms;
+      -o-transition: all 480ms;
+      transition: all 480ms; }
+      .wrapper .content .container .card figcaption h3 {
+        text-transform: uppercase;
+        margin-bottom: 1em; }
+      .wrapper .content .container .card figcaption p {
+        font-size: .75em; }
